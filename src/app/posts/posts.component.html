@@ -1,0 +1,28 @@
+<div style="width: 100%;margin: 12px;">
+    @if (error) {
+    <app-error-widget [error]="error"></app-error-widget>
+    }
+    @else {
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>UserID</th>
+            <th>Title</th>
+            <th>Post</th>
+        </thead>
+        <tbody>
+            @for (post of posts$ | async; track post.id) {
+            <tr>
+                <td>{{post.id}}</td>
+                <td>{{post.userId}}</td>
+                <td>{{post.title}}</td>
+                <td>{{post.body}}</td>
+            </tr>
+            }
+            @empty {
+            <p>No Posts!</p>
+            }
+        </tbody>
+    </table>
+    }
+</div>

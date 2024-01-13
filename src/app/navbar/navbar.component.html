@@ -1,0 +1,9 @@
+<mat-toolbar color="secondary">
+    <span>Mock API2</span>
+</mat-toolbar>
+<nav mat-tab-nav-bar fitInkBarToContent>
+    <a mat-tab-link routerLink="/posts" routerLinkActive #prla="routerLinkActive" [active]="prla.isActive">Posts</a>
+    <a mat-tab-link routerLink="/users" routerLinkActive #urla="routerLinkActive" [active]="urla.isActive">Users</a>
+    <a mat-tab-link routerLink="/comments" routerLinkActive #crla="routerLinkActive"
+        [active]="crla.isActive">Comments</a>
+</nav>
